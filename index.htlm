@@ -20,7 +20,6 @@ body{
     background:#f4f4f4;
     color:#333;
 }
-
 header{
     background:#0d1b2a;
     color:white;

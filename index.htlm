@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Sitio Web</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#0d1b2a;
+    color:white;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h1{
+    font-size:28px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00b4d8;
+}
+
+.hero{
+    background:url('https://picsum.photos/1600/800') center/cover no-repeat;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:40px;
+    border-radius:12px;
+}
+
+.hero h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    background:#00b4d8;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0077b6;
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:36px;
+    color:#0d1b2a;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:15px;
+    color:#0d1b2a;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:12px;
+}
+
+.contact{
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+footer{
+    background:#000814;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+
+    .hero h2{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<nav>
+
+<h1>Mi Empresa</h1>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+
+</nav>
+
+</div>
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h2>Bienvenidos a nuestro sitio</h2>
+
+<p>
+Mostramos toda la actividad de investigación y extensión de rumiantes.
+</p>
+
+<a href="#contacto" class="btn">Contactanos</a>
+
+</div>
+
+</section>
+
+<section id="servicios">
+
+<div class="container">
+
+<h2 class="section-title">Nuestros Servicios</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://picsum.photos/500/300?1">
+
+<div class="card-content">
+<h3>Servicio 1</h3>
+
+<p>
+Realizamos el servicio de análisis de alimentos para rumiantes, evaluamos el impacto de aditivos a nivel ruminal,
+  la produccion de gas metano y la calidad de carne y leche.
+
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/500/300?2">
+
+<div class="card-content">
+<h3>Servicio 2</h3>
+
+<p>
+Evaluamos parametros de calidad de carne(pH, terneza, color, perfil de acidos grasos, nivel de marmoreo).
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/500/300?3">
+
+<div class="card-content">
+<h3>Servicio 3</h3>
+
+<p>
+Determianción de gas metano en sistemas in vitro, en animales in vivo y en sistemas productivos.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="nosotros">
+
+<div class="container">
+
+<h2 class="section-title">Sobre Nosotros</h2>
+
+<div class="about">
+
+<img src="https://picsum.photos/700/500">
+
+<div>
+
+<p>
+  Somos profesionales de INTA Balcarce, pertenecientes al grupo de NUTRICIÓN, METABOLISMO y CALIDAD DE PRODUCTO enfocados en generar información
+para mejorar la eficiencia de alimentación, reducir el impacto ambiental y mejorar la calidad de carne y leche 
+  Trabajamos junto a productores y empresas ayudando a mejorar la produccion animal 
+</p>
+
+<br>
+
+<p>
+Esta página es completamente editable y funciona
+perfectamente en computadoras y celulares.
+</p>
+
+<br>
+
+<p>
+También podés agregar:
+</p>
+
+<br>
+
+<ul>
+<li>Galería de fotos</li>
+<li>Instagram</li>
+<li>WhatsApp</li>
+<li>Ubicación</li>
+<li>Formularios</li>
+<li>Videos</li>
+<li>PDFs</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contacto">
+
+<div class="container">
+
+<h2 class="section-title" style="color:white;">
+Contacto
+</h2>
+
+<p>📍 Balcarce - Buenos Aires - Argentina</p>
+
+<p>📞 +54 9 2266 439104 Secretaría Producción Animal
+      +54 9 2266 439135  Lab Análisis de Alimentos
+  +54 9 2266 439132  Lab Fermentación Ruminal
++54 9 2266 439115   Lab Calidad de Carne
+  +54 9 2266 439119  Lab de Gas Metano
+  
+    </p>
+
+<p>✉️ depetris.gustavo@inta.gob.ar </p>
+
+<br>
+
+<a class="btn" href="https://instagram.com" target="_blank">
+Instagram
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 RUMIANTESLAB - Todos los derechos reservados
+</p>
+
+</footer>
+
+<a 
+class="whatsapp"
+href="https://wa.me/5492266417508"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
